@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .CompanyName }} - Contact</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+    <h1>{{ .CompanyName }}</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/products">Products</a>
+    <a href="/contact">Contact</a>
+</nav>
+<main>
+    <h2>Contact Us</h2>
+    <form action="/submit" method="post">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+</main>
+<footer>
+    &copy; 2024 {{ .CompanyName }}
+</footer>
+</body>
+</html>

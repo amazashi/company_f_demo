@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ .CompanyName }} - Home</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+    <h1>{{ .CompanyName }}</h1>
+    <p>{{ .Slogan }}</p>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/products">Products</a>
+    <a href="/contact">Contact</a>
+</nav>
+<main>
+    <h2>Welcome to {{ .CompanyName }}</h2>
+    <ul>
+        {{ range .Products }}
+        <li>{{ . }}</li>
+        {{ end }}
+    </ul>
+</main>
+<footer>
+    &copy; 2024 {{ .CompanyName }}
+</footer>
+</body>
+</html>
